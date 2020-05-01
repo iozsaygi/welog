@@ -41,3 +41,27 @@
     * Find the **Settings Profile** that you want to add your **Log Type** on.
     * Add new element to the **Log Types** array of **Settings Profile**.
     * Drag and drop your own **Log Type** to the new slot in array.
+
+4. Using **Welog API** in your code.
+```csharp
+using UnityEngine;
+using Welog.Core;
+
+public class Player : MonoBehaviour
+{
+    private void Start()
+    {
+        // Use the available Log Type with "0" index and print given message.
+        WelogAPI.Log(0, "Initializing the Player!");
+    }
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(Keycode.Space))
+        {
+            // Use the available Log Type with "1" index and print given message.
+            WelogAPI.Log(1, "Space Bar input received from Player!");
+        }
+    }
+ }
+  ```
