@@ -1,4 +1,4 @@
-## Subscribing to OnLogReceived Event
+### Subscribing to OnLogReceived Event
 You can subscribe your methods to the **OnLogReceived** event of **WelogAPI** class. </br>
 Your method will be notified when the new log request received by the API.
 
@@ -35,7 +35,7 @@ public class Controller
 }
 ```
 
-## Logging Basic Messages
+### Logging Basic Messages
 **Full example**
 ```csharp
 using UnityEngine;
