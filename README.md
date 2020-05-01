@@ -19,8 +19,8 @@
     * Import the package to your awesome Unity project.
     
 2. Adding **Welog** prefab to your scene.
-    * Find **Wlog** in your **Assets** folder.
-    * Navigate to **"Wlog/Prefabs"** and add **"Tools Canvas (Scale With Screen Size)"** prefab to your scene.
+    * Find **Welog** in your **Assets** folder.
+    * Navigate to **"Welog/Prefabs"** and add **Tools Canvas (Scale With Screen Size)** prefab to your scene.
     
 ## Usage
 1. Managing default **Settings Profiles** and **Log Types**.
@@ -29,5 +29,15 @@
     * You can change any exposed property of default **Settings Profile** and **Log Type** from Unity inspector.
 
 2. Creating your own **Settings Profile** and attaching it to the **Welog** behaviour.
-    * To create **Settings Profile, right** click on your asset browser and navigate to **"Create/Welog/Settings Profile"**. 
-        * You can change any exposed property of **Settings Profile** from Unity inspector.
+    * To create **Settings Profile, right** click on your assets browser and navigate to **"Create/Welog/Settings Profile"**. 
+        * You can change any exposed property  **(Such as Log Life Time and Available Log Types)** of **Settings Profile** from Unity inspector.
+    * Find the **Tools Canvas (Scale With Screen Size)** object in your scene and find **Welog** child object.
+    * Find the **WelogUI** script on **Welog** object.
+    * Drag and drop the **Settings Profile** that you just created on **WelogUI** script.
+    
+3. Creating your own **Log Type** and attaching it to the **Settings Profile**.
+    * To create **Log Type, right** click on your assets browser and navigate to **"Create/Welog/Log Type"**.
+        * You can change any exposed property **(such as Tag and Color)** of **Log Type** from Unity inspector.
+    * Find the **Settings Profile** that you want to add your **Log Type** on.
+    * Add new element to the **Log Types** array of **Settings Profile**.
+    * Drag and drop your own **Log Type** to the new slot in array.
