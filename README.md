@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
  }
   ```
 
-## Additional Information
+## Additional Informations
 * Navigate to the **[Changelog](https://github.com/iozsaygi/welog/blob/master/Documents/Changelog.md)** page to see general timeline of **Welog**.
 * Navigate to the **[WelogAPI](https://github.com/iozsaygi/welog/blob/master/Documents/WelogAPI.md)** page to get detailed information about API.
 * The assets used in **Demo** scene is provided by this cool **[package](https://assetstore.unity.com/packages/2d/characters/bandits-pixel-art-104130)** in **Asset Store**.
