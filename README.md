@@ -65,3 +65,6 @@ public class Player : MonoBehaviour
     }
  }
   ```
+
+## Additional Information
+* The assets used in **Demo** scene is provided by this cool **[package](https://assetstore.unity.com/packages/2d/characters/bandits-pixel-art-104130)** in **Asset Store**.
