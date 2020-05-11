@@ -5,7 +5,7 @@
 </br>
 
 ## About
-**Welog** is fully customizable UI logging tool for **Unity Engine**.
+**Welog** is fully customizable on screen logging tool for **Unity Engine**.
 
 ## Features
 * Easily customize the behaviour of the tool by manipulating attached **Settings Profile** object.
