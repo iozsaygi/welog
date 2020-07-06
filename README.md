@@ -19,7 +19,7 @@ Welog is fully customizable on screen logger tool for Unity Engine.
     * Import the package to your awesome Unity project
     
 2. Adding Welog prefab to your scene.
-    * Find Welog in your **Assets** folder
+    * Find Welog in your Assets folder
     * Navigate to "Welog/Prefabs" and add Tools Canvas (Scale With Screen Size) prefab to your scene
     
 ## Usage
