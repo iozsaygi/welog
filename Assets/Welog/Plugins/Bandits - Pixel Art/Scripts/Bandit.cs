@@ -65,6 +65,7 @@ public class Bandit : MonoBehaviour
 
             m_isDead = !m_isDead;
             WelogAPI.Log(1, "That's it, i am dead!");
+            // WelogAPI.Clear();
         }
 
         //Hurt

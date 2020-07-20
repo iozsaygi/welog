@@ -1,8 +1,10 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using Welog.Core;
 using Welog.Data;
+using LogType = UnityEngine.LogType;
 
 namespace Welog.Behaviours
 {
@@ -22,12 +24,24 @@ namespace Welog.Behaviours
         #region Unity Callbacks
         private void Awake() => waitForSeconds = new WaitForSeconds(settingsProfile.LogLifeTime);
         private void Start() => TryGetComponent(out textMeshProUGUI);
-        private void OnEnable() => WelogAPI.OnLogReceived += ViewLog;
-        private void OnDisable() => WelogAPI.OnLogReceived -= ViewLog;
+        private void OnEnable() => Enable();
+        private void OnDisable() => Disable();
         #endregion
 
-        #region Public Methods
-        public void ViewLog(int logTypeIndex, string message)
+        #region Private Methods
+        private void Enable()
+        {
+            WelogAPI.OnLogReceived += ViewLog;
+            WelogAPI.OnClearRequestReceived += Clear;
+        }
+
+        private void Disable()
+        {
+            WelogAPI.OnLogReceived -= ViewLog;
+            WelogAPI.OnClearRequestReceived -= Clear;
+        }
+
+        private void ViewLog(int logTypeIndex, string message)
         {
             Debug.Assert(logTypeIndex >= 0 && logTypeIndex < settingsProfile.LogTypes.Length);
             Debug.Assert(settingsProfile.LogTypes[logTypeIndex] != null);
@@ -50,9 +64,7 @@ namespace Welog.Behaviours
 
             StartCoroutine(RemoveRoutine(builtLog));
         }
-        #endregion
 
-        #region Private Methods
         private string BuildLog(int logTypeIndex, string message)
         {
             string builtMessage = string.Empty;
@@ -81,6 +93,11 @@ namespace Welog.Behaviours
 
             if (firstLine == message)
                 RemoveFirstLine();
+        }
+
+        private void Clear()
+        {
+            textMeshProUGUI.text = string.Empty;
         }
         #endregion
     }
