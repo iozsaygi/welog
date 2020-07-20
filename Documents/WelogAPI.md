@@ -15,7 +15,7 @@
 
 ## Static Methods
 * **Log(int, string)** </br>
-    Use this function to create a new Log request.
+    Use this function to create a new log request.
    
     ```csharp
     using UnityEngine;
