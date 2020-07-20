@@ -8,6 +8,10 @@
     
 * **OnClearRequestReceived** </br>
    Subscribe to this event to get notified when clear request received by the API.
+   
+    ```csharp 
+      [Access Modifier] void MethodName()
+    ```
 
 ## Static Methods
 * **Log(int, string)** </br>
